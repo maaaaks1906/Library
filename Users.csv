@@ -1,0 +1,6 @@
+"FIRSTNAME","ID","LASTNAME","LOGIN","PASSWORD","ROLEID"
+"Adam","1","Kowalski","a","a","2"
+"Krzysiek","2","Kowal","b","b","3"
+"Maks","3","Kaczmarek","c","c","3"
+"Ola","4","Sienkiewicz","d","d","3"
+"Wladek","5","Bibliotekarz","e","e","1"
