@@ -8,7 +8,6 @@ public class AdminMenuController {
     public void onLogoutButtonClick(MouseEvent mouseEvent) {
         try {
             new MainMenu().start(new Stage());
-            new LoginMenu().stop();
         } catch (Exception e) {
             e.printStackTrace();
         }
