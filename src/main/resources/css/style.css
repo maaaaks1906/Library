@@ -1,0 +1,27 @@
+.background {
+    -fx-background-color: #a3c791; //zielony
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 16px;
+    -fx-color: #000000;
+}
+
+.button {
+    -fx-background-color: #97ceb6;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 29px;
+    -fx-color: #000000;
+}
+
+.text-area {
+    -fx-background-color: #fece2f;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 16px;
+    -fx-color: #000000;
+}
+
+.login-button {
+    -fx-background-color: #97ceb6;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 16px;
+    -fx-color: #000000;
+}

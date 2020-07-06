@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="353.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maks.library.controllers.MainMenuController">
+   <children>
+      <Button layoutX="39.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onLoginButtonClick" prefHeight="132.0" prefWidth="276.0" text="LOGIN" textAlignment="CENTER">
+         <font>
+            <Font size="29.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="39.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" prefHeight="132.0" prefWidth="276.0" text="EXIT" textAlignment="CENTER">
+         <font>
+            <Font size="68.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="39.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#onCreateAccountButtonClick" prefHeight="132.0" prefWidth="276.0" text="NEW ACCOUNT" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="button" />
+         </styleClass>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</Pane>
