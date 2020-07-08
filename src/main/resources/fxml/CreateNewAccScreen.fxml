@@ -9,19 +9,19 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="322.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maks.library.controllers.CreateNewAccountController">
    <children>
-      <TextField layoutX="108.0" layoutY="37.0">
+      <TextField fx:id="firstNameTextField" layoutX="108.0" layoutY="37.0">
          <effect>
             <DropShadow color="RED" />
          </effect></TextField>
-      <PasswordField layoutX="108.0" layoutY="219.0">
+      <PasswordField fx:id="passwordTextField" layoutX="108.0" layoutY="219.0">
          <effect>
             <DropShadow color="#fc0000" />
          </effect></PasswordField>
-      <TextField layoutX="108.0" layoutY="97.0">
+      <TextField fx:id="lastNameTextField" layoutX="108.0" layoutY="97.0">
          <effect>
             <DropShadow color="RED" />
          </effect></TextField>
-      <TextField layoutX="108.0" layoutY="158.0">
+      <TextField fx:id="loginTextField" layoutX="108.0" layoutY="158.0">
          <effect>
             <DropShadow color="RED" />
          </effect></TextField>

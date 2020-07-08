@@ -1,137 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maks.library.controllers.AdminMenuController">
-  <tabs>
-    <Tab id="findBookTab" text="Find book">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
-               <children>
-                  <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maks.library.controllers.AdminMenuController">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/style.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab id="findBookTab" text="Find book">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
                      <effect>
                         <DropShadow />
                      </effect>
-                  </Button>
-                  <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="findBookTab" text="Check lends">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
                      <effect>
                         <DropShadow />
                      </effect>
-                  </Button>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect></AnchorPane>
-      </content>
-    </Tab>
-      <Tab id="findBookTab" text="Check lends">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
-               <children>
-                  <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="findBookTab" text="Books collection">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ListView fx:id="booksListView" layoutX="200.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
                      <effect>
                         <DropShadow />
                      </effect>
-                  </Button>
-                  <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="findBookTab" text="Add book">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
                      <effect>
                         <DropShadow />
                      </effect>
-                  </Button>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </AnchorPane>
-         </content>
-      </Tab>
-      <Tab id="findBookTab" text="Books collection">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
-               <children>
-                  <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="findBookTab" text="View members">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ListView fx:id="userListView" layoutX="200.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
                      <effect>
                         <DropShadow />
                      </effect>
-                  </Button>
-                  <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="findBookTab" text="Add author">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
                      <effect>
                         <DropShadow />
                      </effect>
-                  </Button>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </AnchorPane>
-         </content>
-      </Tab>
-      <Tab id="findBookTab" text="Add book">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
-               <children>
-                  <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </AnchorPane>
-         </content>
-      </Tab>
-      <Tab id="findBookTab" text="View members">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
-               <children>
-                  <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </AnchorPane>
-         </content>
-      </Tab>
-      <Tab id="findBookTab" text="Add author">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
-               <children>
-                  <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-               </children>
-               <effect>
-                  <DropShadow />
-               </effect>
-            </AnchorPane>
-         </content>
-      </Tab>
-  </tabs>
-</TabPane>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</Pane>

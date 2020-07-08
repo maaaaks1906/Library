@@ -31,4 +31,7 @@ public class BookService {
             .collect(Collectors.toList());
     }
 
+    public List<Book> findAll() {
+        return bookRepository.findAll();
+    }
 }

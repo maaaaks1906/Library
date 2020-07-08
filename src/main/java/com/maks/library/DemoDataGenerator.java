@@ -63,6 +63,12 @@ public class DemoDataGenerator {
         bookRepository.save(new Book("ABC", 1, 1991, 1,true));
         bookRepository.save(new Book("Wiedzmin", 3, 1989, 3,true));
         bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
     }
 
 

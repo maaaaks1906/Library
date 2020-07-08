@@ -201,7 +201,7 @@ public class Main {
 //        lend.getBook().setAvailable(true);
 //        lend.setActualReturnDate(LocalDate.now());
 //        library.getLibraryBooks().add(lend.getBook());
-//        member.getLends().removeIf(l -> l == lend); // TODO: 15/05/2020 == albo .equals
+//        member.getLends().removeIf(l -> l == lend);
 //    }
 //
 //    private static void handleLendBook() {

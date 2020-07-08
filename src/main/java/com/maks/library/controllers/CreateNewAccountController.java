@@ -1,24 +1,19 @@
 package com.maks.library.controllers;
 
-import com.maks.library.database.model.User;
-import com.maks.library.database.repository.UserRepository;
+import com.maks.library.ScreenManager;
+import com.maks.library.service.UserService;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 
-import java.awt.*;
 
 public class CreateNewAccountController {
 
-    private static UserRepository userRepository = UserRepository.getInstance();
+    private static UserService userService = UserService.getInstance();
 
     @FXML
-    Pane newAccountPane;
-
-    @FXML
-    TextField nameTextField;
+    TextField firstNameTextField;
 
     @FXML
     TextField lastNameTextField;
@@ -27,34 +22,30 @@ public class CreateNewAccountController {
     TextField loginTextField;
 
     @FXML
-    TextField passwordTextField;
+    TextField passwordTextField; // TODO: 07/07/2020 zamienic na passwordfield
 
     public static void initialize() {
     }
 
     @FXML
     public void onSignUpButtonClick(MouseEvent mouseEvent) {
-        if (userRepository.findByLogin(loginTextField.getText()).isPresent()) { // TODO: 06/07/2020 nullpointer
+        String login = loginTextField.getText();
+        if (!userService.isLoginTaken(login)) {
+            String firstName = firstNameTextField.getText();
+            String lastName = lastNameTextField.getText();
+            String password = passwordTextField.getText();
+
+            userService.register(firstName, lastName, login, password);
+            // TODO: 07/07/2020 wyswietl alert, ze konto utworzone
 
         } else {
-            userRepository.save(new User(
-                    nameTextField.getText(),
-                    lastNameTextField.getText(),
-                    loginTextField.getText(),
-                    passwordTextField.getText(),
-                    3));
-
-            System.out.println();
-            System.out.println("+++++++++++++Konto utworzone+++++++++++++");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Login is already taken!");
+            alert.showAndWait();
         }
     }
 
     @FXML
     public void onCancelButtonClick(MouseEvent mouseEvent) {
-        try {
-            new MainMenu().start(new Stage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        ScreenManager.getInstance().activate(ScreenManager.Screen.MAIN_MENU);
     }
 }
