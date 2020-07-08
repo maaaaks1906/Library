@@ -24,4 +24,5 @@ public class AuthorRepository extends Repository<Author> {
     public List<Author> findAuthorByName(String name) {
         return findAll().stream().filter(author -> author.getLastName().equals(name)).collect(Collectors.toList());
     }
+
 }

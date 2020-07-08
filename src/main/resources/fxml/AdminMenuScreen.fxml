@@ -111,7 +111,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <ListView fx:id="userListView" layoutX="200.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="userListView" layoutX="138.0" layoutY="45.0" prefHeight="200.0" prefWidth="325.0" />
                      </children>
                      <effect>
                         <DropShadow />

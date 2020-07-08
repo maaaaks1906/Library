@@ -46,8 +46,8 @@ public class LoginMenuController {
 
             switch (user.getRoleId()) {
                 case 2: openAdminMenu(); break;
-                case 3:  break;
-                default: System.out.println("Bledna rola");
+                case 3: openAdminMenu(); break;
+                default: System.out.println("Bledne dane do logowania");
             }
 
         } catch (WrongCredentialsException e) {

@@ -12,10 +12,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.List;
 
 public class AdminMenuController {
+
+    private static AdminMenuController INSTANCE = null;
+
+    public static AdminMenuController getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new AdminMenuController();
+        }
+
+        return INSTANCE;
+    }
 
     private BookService bookService = BookService.getInstance();
     private UserService userService = UserService.getInstance();
@@ -52,16 +64,23 @@ public class AdminMenuController {
                 super.updateItem(user, empty);
 
                 if (user != null) {
-                    setText("Name: " + user.getFirstName() + "Last name" +  user.getLastName());
+                    setText("Name: " + user.getFirstName() + " Last name: " +  user.getLastName());
                 }
             }
         });
     }
 
-    private void onListItemClick(MouseEvent mouseEvent) {
+    public void onListItemClick(MouseEvent mouseEvent) {
         if (mouseEvent.getClickCount() == 2) {
-            Book selectedItem = booksListView.getSelectionModel().getSelectedItem();
-            // todo utworz okno ze szczegolami o danej ksiazce
+            BookDetailsController.book = booksListView.getSelectionModel().getSelectedItem();
+            //tu mam zrobic nowy ekran
+            try {
+                new BookDetailsController().start(new Stage());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
         }
     }
 

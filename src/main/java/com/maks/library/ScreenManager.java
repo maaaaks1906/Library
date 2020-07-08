@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class ScreenManager {
     public enum Screen {
-        MAIN_MENU, LOGIN_MENU, ADMIN_MENU, NEW_ACCOUNT_MENU
+        MAIN_MENU, LOGIN_MENU, ADMIN_MENU, NEW_ACCOUNT_MENU, BOOK_DETAIL_MENU
     }
 
     private static ScreenManager INSTANCE = null;
@@ -54,5 +54,9 @@ public class ScreenManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void removeScreen(Screen screen) {
+        screens.remove(screen);
     }
 }

@@ -58,6 +58,7 @@ public class DemoDataGenerator {
 
     private static void generateBooks() {
         BookRepository bookRepository = BookRepository.getInstance();
+        AuthorRepository authorRepository = AuthorRepository.getInstance();
 
         bookRepository.deleteAll();
         bookRepository.save(new Book("ABC", 1, 1991, 1,true));

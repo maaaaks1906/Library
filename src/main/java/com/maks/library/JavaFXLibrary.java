@@ -18,6 +18,7 @@ public class JavaFXLibrary extends Application {
         URL login = getClass().getResource("/fxml/LoginMenuScreen.fxml");
         URL createNewAccount = getClass().getResource("/fxml/CreateNewAccScreen.fxml");
         URL adminMenu = getClass().getResource("/fxml/AdminMenuScreen.fxml");
+        URL bookDetailMenu = getClass().getResource("/fxml/BookDetailScreen.fxml");
 
         Pane mainMenuScreen = FXMLLoader.load(main);
 
@@ -28,6 +29,7 @@ public class JavaFXLibrary extends Application {
         screenManager.addScreen(Screen.LOGIN_MENU, login);
         screenManager.addScreen(Screen.ADMIN_MENU, adminMenu);
         screenManager.addScreen(Screen.NEW_ACCOUNT_MENU, createNewAccount);
+        screenManager.addScreen(Screen.BOOK_DETAIL_MENU, bookDetailMenu);
 
         ScreenManager.setStage(stage);
         ScreenManager.setMain(scene);

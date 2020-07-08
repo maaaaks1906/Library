@@ -16,5 +16,4 @@ public class Author extends AbstractModel {
     @CsvBindByName
     private String lastName;
 
-
 }
