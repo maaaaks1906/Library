@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.maks.library.controllers.AdminMenuController">
    <children>
@@ -14,7 +18,7 @@
          <tabs>
             <Tab id="findBookTab" text="Find book">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
                            <effect>
@@ -26,6 +30,19 @@
                               <DropShadow />
                            </effect>
                         </Button>
+                        <Button layoutX="265.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#onSearchButtonClick" styleClass="login-button" text="Search">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="searchTextField" layoutX="43.0" layoutY="84.0" promptText="type here" />
+                        <ChoiceBox fx:id="searchByChoiceBox" layoutX="43.0" layoutY="30.0" prefHeight="32.0" prefWidth="198.0" />
+                        <ListView fx:id="searchResultListView" layoutX="42.0" layoutY="136.0" prefHeight="153.0" prefWidth="295.0" />
+                        <Label layoutX="43.0" layoutY="14.0" text="Find book by:" textFill="#00000081">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                      <effect>
                         <DropShadow />
@@ -43,6 +60,35 @@
                            </effect>
                         </Button>
                         <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <ListView fx:id="lendListView" layoutX="14.0" layoutY="14.0" prefHeight="262.0" prefWidth="574.0" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab id="findBookTab" text="Lend Book">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/style.css">
+                     <children>
+                        <Button layoutX="343.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onLogoutButtonClick" styleClass="login-button" stylesheets="@../css/style.css" text="Logout">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#onExitButtonClick" styleClass="login-button" text="Exit">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="findBookToLendTextField" layoutX="32.0" layoutY="27.0" promptText="What book you desire?" />
+                        <ListView fx:id="bookToLendListView" layoutX="32.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button layoutX="264.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#onFindButtonClick" styleClass="login-button" text="Find">
                            <effect>
                               <DropShadow />
                            </effect>
@@ -90,6 +136,20 @@
                               <DropShadow />
                            </effect>
                         </Button>
+                        <TextField fx:id="bookTitleTextField" layoutX="36.0" layoutY="33.0" promptText="Title" />
+                        <TextField fx:id="bookAuthorTextField" layoutX="36.0" layoutY="91.0" promptText="Author" />
+                        <TextField fx:id="bookYearTextField" layoutX="36.0" layoutY="152.0" promptText="Year" />
+                        <ChoiceBox fx:id="bookGenreChoiceBox" layoutX="37.0" layoutY="213.0" prefHeight="32.0" prefWidth="196.0" styleClass="text-area" />
+                        <Button layoutX="273.0" layoutY="213.0" mnemonicParsing="false" onMouseClicked="#onAddBookButtonClick" styleClass="login-button" text="Add Book">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label layoutX="37.0" layoutY="196.0" text="Pick genre" textFill="#000000a9">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
                      </children>
                      <effect>
                         <DropShadow />

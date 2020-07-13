@@ -26,4 +26,5 @@ public class GenreRepository extends Repository <Genre> {
                 .filter(g -> g.getGenre().equalsIgnoreCase(genre))
                 .findFirst();
     }
+
 }

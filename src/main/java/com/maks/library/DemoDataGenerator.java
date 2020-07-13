@@ -51,25 +51,27 @@ public class DemoDataGenerator {
         GenreRepository genreRepository = GenreRepository.getInstance();
 
         genreRepository.deleteAll();
-        genreRepository.save(new Genre("GENRE_EDUCATION")); // id 1
-        genreRepository.save(new Genre("GENRE_SCI-FI"));   //id 2
-        genreRepository.save(new Genre("GENRE_FANTASY"));   //id 3
+        genreRepository.save(new Genre("EDUCATION")); // id 1
+        genreRepository.save(new Genre("SCI-FI"));   //id 2
+        genreRepository.save(new Genre("FANTASY"));   //id 3
     }
 
     private static void generateBooks() {
         BookRepository bookRepository = BookRepository.getInstance();
-        AuthorRepository authorRepository = AuthorRepository.getInstance();
 
         bookRepository.deleteAll();
-        bookRepository.save(new Book("ABC", 1, 1991, 1,true));
-        bookRepository.save(new Book("Wiedzmin", 3, 1989, 3,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
-        bookRepository.save(new Book("Dziady", 1, 1987, 2,true));
+        bookRepository.save(new Book("ABC", "Lem", 1991, 1,true));
+        bookRepository.save(new Book("ABC", "Lem", 1991, 1,true));
+        bookRepository.save(new Book("ABC", "Lem", 1991, 1,true));
+        bookRepository.save(new Book("Wiedzmin", "Sapkowski", 1989, 3,true));
+        bookRepository.save(new Book("Wiedzmin", "Sapkowski", 1989, 3,true));
+        bookRepository.save(new Book("Wiedzmin", "Sapkowski", 1989, 3,true));
+        bookRepository.save(new Book("Dziady", "Mickiewicz", 1987, 2,true));
+        bookRepository.save(new Book("Dziady", "Mickiewicz", 1987, 2,true));
+        bookRepository.save(new Book("Dziady", "Mickiewicz", 1987, 2,true));
+        bookRepository.save(new Book("Dziady", "Mickiewicz", 1987, 2,true));
+        bookRepository.save(new Book("Dziady", "Mickiewicz", 1987, 2,true));
+        bookRepository.save(new Book("Dziady", "Mickiewicz", 1987, 2,true));
     }
 
 

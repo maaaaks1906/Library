@@ -2,11 +2,14 @@ package com.maks.library.controllers;
 
 import com.maks.library.ScreenManager;
 import com.maks.library.database.model.Book;
+import com.maks.library.database.model.Genre;
+import com.maks.library.service.BookService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -19,9 +22,17 @@ public class BookDetailsController {
     TextArea bookDetailTextArea;
 
     @FXML
+    TextField titleTextField;
+
+    @FXML
+    TextField genreTextField;
+
+    @FXML
     Button returnButton;
 
     public static Book book;
+
+    public BookService bookService = BookService.getInstance();
 
     private static BookDetailsController INSTANCE = null;
     
@@ -36,9 +47,13 @@ public class BookDetailsController {
     public void initialize() {
         bookDetailTextArea.setText(book.getTitle() + book.getYear() + book.getGenreId());
         bookDetailTextArea.setEditable(false);
+
+        titleTextField.setText(book.getTitle());
+
+        Genre genre = bookService.findGenreById(book.getGenreId());
+        genreTextField.setText(genre.getGenre());
+        // TODO: 13/07/2020 dokonczyc
     }
-
-
 
     public void onReturnButtonClick(MouseEvent mouseEvent) {
         ScreenManager screenManager = ScreenManager.getInstance();

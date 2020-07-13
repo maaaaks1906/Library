@@ -3,7 +3,6 @@ package com.maks.library.database.model;
 import com.opencsv.bean.CsvBindByName;
 import lombok.*;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -15,7 +14,7 @@ public class Book extends AbstractModel {
     private String title;
 
     @CsvBindByName
-    private int authorId;
+    private String author;
 
     @CsvBindByName
     private int year;
@@ -23,6 +22,6 @@ public class Book extends AbstractModel {
     @CsvBindByName
     private int genreId;
 
+    @CsvBindByName
     private boolean isAvailable;
-
 }

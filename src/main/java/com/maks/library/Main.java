@@ -161,7 +161,7 @@ public class Main {
 //                    .bookAuthor(author)
 //                    .bookGenre(genre)
 //                    .build();
-//
+////
 ////            library.addBook(book); todo wywalic metode
 //            database.save(book);
 //
@@ -243,7 +243,7 @@ public class Main {
 
         int choice = scanner.nextInt();
         switch (choice) {
-            case 1: handleFindAllBooksByTitle(); break; // TODO: 02/06/2020 wywala do loginMenu 
+            case 1: handleFindAllBooksByTitle(); break;
             case 2: handleFindAllBooksByAuthor(); break; // null pointer
             case 3: handleFindAllBooksByYear(); break;
             case 4: handleFindAllBooksByGenre(); break;
@@ -288,6 +288,8 @@ public class Main {
         if (authorRepository.findAuthorByName(lastName).isEmpty()) {
             System.out.println("Brak autora o podanym nazwisku");
             handleFindBook();
+        } else {
+            System.out.println(authorRepository.findAuthorByLastName(lastName));
         }
     }
 
